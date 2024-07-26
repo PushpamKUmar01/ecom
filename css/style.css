@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+nav .toggle-button {
+  display: none;
+  float: right;
+  padding: 14px 16px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+
+  nav ul li {
+    float: none;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: block;
+  }
+
+  nav .toggle-button {
+    display: block;
+    cursor: pointer;
+  }
+  
+}
+
+.products {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: calc(27.333% - 24px);
+}
+
+.product img {
+  max-width: 100%;
+}
+
+/*-------------------promotional---------------------*/
+
+.containerA {
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+@media screen and (max-width: 770px) {
+
+  .prev,
+  .next {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .prev,
+  .next {
+    font-size: 14px;
+  }
+}
